@@ -81,8 +81,30 @@
             </div>
         </form>
     </div>
+<!--create post modal-->
+    <div id="CreatePost" class="modal2">
 
+        <form>
+            <div class="modal-content">
+                <span class ="close" onclick="close_CreatePost()">&times;</span>
+            </div>
+            <h1>Pen Your Post</h1>
+            <hr>
+            <div class="container1">
+    
+    
+                <label class="Title"><b>Title</b></label>
+                <input type="text" id="Title" class="textarea" name="Title" placeholder="Enter title of your post" required>
+              
+    
+                <label class="Content"><b>Contents</b></label>
+                <textarea id="description" class="textarea" name="description" placeholder="Enter the contents of your post" cols="40" rows="20"></textarea>
+                <button type="Create" class="Createbtn">Create</button>
+            </div>
+        </form>
+    </div>
     <script type="text/javascript" src="js\common.js"></script>
+    <script type="text/javascript" src="js\index.js"></script>
 
 </body>
 
