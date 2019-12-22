@@ -1,5 +1,5 @@
 function signUp(){
-     let signInEl = document.getElementById('SignIn')
+    let signInEl = document.getElementById('SignIn')
     signInEl.style.display = "none";
     let signUpEl = document.getElementById('SignUp')
     signUpEl.style.display = "block";
