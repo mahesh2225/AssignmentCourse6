@@ -92,15 +92,11 @@ body {
         border-radius: 0 15px 15px 0;
         padding: 0 20px;      
 }
-
- /* Responsive post-title class */
-
 .post-title{
-   
-    color: #2b312b;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:grey;
     height: 25px;
     }
-    
 @media screen and (max-width: 1060px) {
     .post-title {
         font-size: 20px;
@@ -143,7 +139,15 @@ body {
     }
 }
 
-
+.post-more {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
 
 .post-desc{
     height: 100px;
@@ -151,11 +155,10 @@ body {
     overflow: hidden;
     position: relative; 
     line-height: 0.95em;
-    max-height: 3.6em; 
+    max-height: 2.9em; 
     text-align: justify;
     margin-right: 30px;
 }
-
 
 
 
@@ -169,6 +172,7 @@ body {
     float: right;
     letter-spacing: 2px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #centerPost{
@@ -215,30 +219,85 @@ body {
 }
 
 
+.delete-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+  }
 
 a {
     color: black;
     text-decoration: none;
 }
 
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+  }
+  
+#modalBtnGreen{
+    background: rgba(97, 182, 102);
+    text-align: left;
+    justify-content: left;
+    font-size: 12pt;
+    padding: 12px 60px;
+    border: 1px solid transparent;
+    color: white;
+  }
 
+#modalBtnGreen:hover{
+    background: rgba(97, 182, 102, 0.8);
+
+}  
+
+#modalBtnGreen:focus{
+    background: rgba(97, 182, 102);
+    outline: 0;
+}
+
+#modalBtnRed{
+    background: rgb(247, 87, 79);
+    text-align: right;
+    justify-content: right;
+    font-size: 12pt;
+    padding: 12px 60px;
+    color: white;
+    margin-left: 90px;
+    border: 1px solid transparent;
+   
+ }
+ 
+#modalBtnRed:hover{
+    background: rgb(247, 87, 79, 0.8);
+ }
+
+#modalBtnRed:focus{
+    background: rgb(247, 87, 79);
+    outline: 0;
+}
+
+.modalBtnContainer{
+    margin-left: 10px;
+    margin-top: 20px;
+}
 
 .center{
     text-align: center;
     color: black;
-    font-family: 'Itim', cursive;
+    font-family: 'Itim';
 }
 
 
 
-    
-  
-    :hover {
-      transition: all 0.2s ease-out;
-      box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-      top: -4px;
-     
-    }
-  
-    
-  
+
+
