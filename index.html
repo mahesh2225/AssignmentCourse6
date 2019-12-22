@@ -11,13 +11,13 @@
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
-    
+
     <div class="header">
 
         <span id="mainheading" class="heading">ScriBBler</span>
-        <button class= "button" id="signin" onclick="signIn()">Sign In</button>
-        <button class= "button" id="signup" onclick="signUp()">Sign Up</button><br>
-        <span id="subheading" class = "heading">Explore, Imagine, Create</span>
+        <button class="button" id="signup" onclick="signUp()">Sign Up</button>
+        <button class="button" id="signin" onclick="signIn()">Sign In</button><br>
+        <span id="subheading" class="heading">Explore, Imagine, Create</span>
         <!-- Insert code for Sign Up, Sign In button here. Add code for "ScriBBler" heading and the sub-heading -->
 
     </div>
@@ -27,6 +27,63 @@
         <a><button id="allPostbtn" class="Buttons">All Posts</button></a>
         <button id="createPostbtn" class="Buttons" onclick="createPost()">Create Post</button>
     </div>
+    <!--Sign  UP  modal-->
+    <div id="SignUp" class="modal">
+
+
+        <form>
+            <div class="modal-content">
+                <span class="close" onclick="close_signUp()">&times;</span>
+            </div>
+            <h1>Get Started</h1>
+            <hr>
+            <div class="container">
+                <label class="Fullname"><b>Name</b></label>
+                <input type="text" placeholder="Enter your name" name="Fullname" required>
+
+                <label class="Uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter your username" name="Uname" required>
+
+                <label class="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter your password" name="psw" required>
+
+                <label class="psw-repeat"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Re-enter your password" name="psw-repeat" required>
+
+                <button type="submit" class="signupbtn">Sign Up</button>
+
+            </div>
+        </form>
+    </div>
+
+
+    <!--Sign In modal-->
+    <div id="SignIn" class="modal">
+        <form>
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="close_signIn()">&times;</span>
+            </div>
+            <h2>Welcome Back!</h2>
+            <hr>
+            <div class="container">
+
+
+                <label class="Uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter your username" name="Uname" required>
+
+                <label class="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter your password" name="psw" required>
+
+
+                <button type="submit" class="signinbtn">Sign In</button>
+                <p>Not a member? <span id="signuplink" onclick="signUp()">Sign Up</span></p>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="js\common.js"></script>
+
 </body>
 
 </html>

@@ -9,7 +9,7 @@
 
 
 #subheading{
-    color: white;
+    color: black;
     font-family: 'Ubuntu Mono';
     font-size: 15px;
     margin: 40px;
@@ -38,46 +38,46 @@
 }
 
 @media screen and (max-width: 714px) {
-    #signin {
+    #signun {
         left: 78%;
     }
-    #signup{
+    #signin{
         left: 89%;
     }
 }
 
 @media screen and (max-width: 620px) {
-    #signin {
+    #signup {
         left: 76%;
     }
-    #signup{
+    #signin{
         left: 87%;
     }
 }
 
 @media screen and (max-width: 555px) {
-    #signin {
+    #signup {
         left: 72%;
     }
-    #signup{
+    #signin{
         left: 83%;
     }
 }
 
 @media screen and (max-width: 555px) {
-    #signin {
+    #signup {
         left: 68%;
     }
-    #signup{
+    #signin{
         left: 83%;
     }
 }
-#signin{
+#signup{
     left: 80%;
     top: 1.5%;
 }
 
-#signup{
+#signin{
     left: 90%;
     top: 1.5%;
 }
@@ -92,3 +92,4 @@
     top: 50%;
     left: 52%;
 }
+
