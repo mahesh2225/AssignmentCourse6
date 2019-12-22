@@ -62,7 +62,7 @@ body {
   
   .post-content {
     float: right;
-    background: rgb(168, 164, 164);
+    background:#b3aeae;
     color: black;
     flex: 80%;
     padding: 10px;
