@@ -1,13 +1,13 @@
 var activeCard;
 
 function DeleteModal(id) {
-  document.getElementById("confirm-modal").style.display = "block";
+  document.getElementById("confirmer-modal").style.display = "block";
   activeCard = id;
   console.log("id"+id);
 }
 
 function deletePost(action) {
-  document.getElementById("confirm-modal").style.display = "none";
+  document.getElementById("confirmer-modal").style.display = "none";
 
   console.log('action:'+action)
   if (action == false) {

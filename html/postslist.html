@@ -10,39 +10,37 @@
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
     <link href="../styles/postslist.css" rel="stylesheet" type="text/css" />
     <link href="../styles/common.css" rel="stylesheet" type="text/css"/>
+ 
 </head>
 
 <body>
     <!-- TODO: Include code for header here -->
-    <div class="header">
-
-            <span id="mainheading" class="titleheading">ScriBBler</span>
-            <button class="button2" id="signup" onclick="SignUp()">Sign Up</button>
-            <button class="button2" id="signin" onclick="SignIn()">Sign In</button><br>
-            <span id="subheading" class="titleheading">Explore, Imagine, Create</span>
+    <div id="header">
+    </div>
     
-    
-        </div>
+        
+       
     <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
     <!-- list of all posts starts here -->
     <div class="post-block" id="postsblock">
     </div>
     <!-- TODO: Write code for delete post modal here -->
-    <div class="model">
-        <div class="modal" id="confirm-modal">
-            <div class="modal-content">
-                <p class="modalHeading">Are you sure want to delete this post?</p>
-                <div class="confirm-action">
-                    <button class="left-btn btn btn-success" onclick="deletePost(true)" type="button">Yes
-                    </button>
-                    <button class="right-btn btn btn-danger" onclick="deletePost(false)" type="button">No
-                    </button>
-                </div>
+    <div class="model-section">
+        <div class="modal" id="confirmer-modal">
+          <div class="modal-content">
+            <p class="model-heading">Are you sure want to delete this post?</p>
+            <div class="confirmer-action">
+              <button class="left-btn btn btn-success" onclick="deletePost(true)" type="button">Yes
+              </button>
+              <button class="right-btn btn btn-danger" onclick="deletePost(false)" type="button">No
+              </button>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
    
     <!-- list of all posts ends here -->
     <script src="../scripts/common.js" type="text/javascript"></script>

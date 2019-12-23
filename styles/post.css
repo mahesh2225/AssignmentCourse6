@@ -1,5 +1,5 @@
-#post-contents:disabled,
-#post-title-edit:disabled {
+#postContent:disabled,
+#editpostTitle:disabled {
   background: white;
   border: none;
 }
@@ -14,7 +14,7 @@
   border-radius: 0px;
 }
 
-#post-contents {
+#postContent {
   margin-top: 20px;
 }
 

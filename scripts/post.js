@@ -36,18 +36,18 @@ var comments = [];
 
 function populatePost(index) {
   console.log(index);
-  document.getElementById('post-contents').value = posts[index].content;
-  document.getElementById('post-contents').setAttribute('disabled', 'true');
-  document.getElementById('post-title-edit').style.display = "none";
+  document.getElementById('postContent').value = posts[index].content;
+  document.getElementById('postContent').setAttribute('disabled', 'true');
+  document.getElementById('editpostTitle').style.display = "none";
 }
 
 function onEditButtnClicked() {
-  document.getElementById('post-contents').removeAttribute('disabled');
-  document.getElementById('post-title-edit').value = document.getElementById(
+  document.getElementById('postContent').removeAttribute('disabled');
+  document.getElementById('editpostTitle').value = document.getElementById(
     'title').innerText;
-  document.getElementById('post-title-edit').style.display = "block";
-  document.getElementById('post-title-edit').style.borderColor = "pink";
-  document.getElementById('post-contents').style.borderColor = "pink";
+  document.getElementById('editpostTitle').style.display = "block";
+  document.getElementById('editpostTitle').style.borderColor = "pink";
+  document.getElementById('postContent').style.borderColor = "pink";
   document.getElementById('title').style.display = "none";
   document.getElementById(
     'edit-save-button').innerHTML = 'Save <i class="fa fa-save"></i>';
@@ -60,11 +60,11 @@ function onSaveButtonClicked() {
     'edit-save-button').innerHTML = 'Edit <i class="fa fa-edit"></i>';
   document.getElementById('edit-save-button').setAttribute('onclick',
     'onEditButtnClicked()');
-  document.getElementById('post-contents').setAttribute('disabled', 'true');
-  document.getElementById('post-title-edit').style.display = "none";
+  document.getElementById('postContent').setAttribute('disabled', 'true');
+  document.getElementById('editpostTitle').style.display = "none";
   document.getElementById('title').style.display = "block";
   document.getElementById('title').innerText = document.getElementById(
-    'post-title-edit').value;
+    'editpostTitle').value;
 }
 
 function onLikesButtonCLicked() {
@@ -107,7 +107,7 @@ function showPostForEdit(index) {
     + '<form>'
     + '<h4 id="title">' + posts[index].heading + '</h4>'
     + '<div class="form-group">'
-    + '<input class="form-control" id="post-title-edit" type="text"/>'
+    + '<input class="form-control" id="editpostTitle" type="text"/>'
     + '</div>'
     + '<div id="authorSection">'
     + '<span id="authName">' + posts[index].author + '</span>'
@@ -118,7 +118,7 @@ function showPostForEdit(index) {
     + '</span>'
     + '</div>'
     + '<div class="form-group">'
-    + '<textarea class="form-control" id="post-contents" rows="10"></textarea>'
+    + '<textarea class="form-control" id="postContent" rows="10"></textarea>'
     + '</div>'
     + '<button class="btn btn-danger" id="likeBtn" onclick="onLikesButtonCLicked()" type="button"><i '
     + 'class="fa fa-thumbs-up"></i>Like'

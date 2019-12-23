@@ -2,110 +2,54 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
-    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
-    <link href="styles/index.css" rel='stylesheet' type='text/css'>
-    <link href="styles/common.css" rel='stylesheet' type='text/css'>
-    
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- TODO: Include Font Awesome file here -->
+  <!-- <link href="styles/fontawesome/css/all.css" rel="stylesheet"> -->
+  <!-- TODO: Include Google Fonts file here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+  <link href="./styles/index.css" rel="stylesheet" type="text/css"/>
+  <link href="./styles/common.css" rel="stylesheet" type="text/css"/>
+  <title>Welcome to Scribbler Blog!</title>
 </head>
 
 <body>
-    <!-- TODO: Include all your code for the header and home page here -->
+<!-- TODO: Include all your code for the header and home page here -->
+<div id="header">
+</div>
 
-    <div class="header">
-
-        <span id="mainheading" class="titleheading">ScriBBler</span>
-        <button class="button2" id="signup" onclick="signUp()" >Sign Up</button>
-        <button class="button2" id="signin" onclick="signIn()">Sign In</button><br>
-        <span id="subheading" class="titleheading">Explore, Imagine, Create</span>
-        <!-- Insert code for Sign Up, Sign In button here. Add code for "ScriBBler" heading and the sub-heading -->
-
+<div class="modal" id="createNewPost">
+  <div class="modal-content">
+    <div style="border-bottom: 1px solid black;padding-bottom: 10px;">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <span class="model-heading">Pen Your Post</span>
     </div>
-    <div class="postButtons">
-
-        <!-- Insert code for All Posts & Create Post button here -->
-        <a href="./html/postslist.html"><button id="allPostbtn" class="Buttons">All Posts</button></a>
-        <button id="createPostbtn" class="Buttons" onclick="createPost()">Create Post</button>
-    </div>
-    <!--Sign  UP  modal-->
-    <div id="SignUp" class="modal">
-
-
-        <form>
-            <div class="modal-content">
-                <span class="close" onclick="close_signUp()">&times;</span>
-            </div>
-            <h1>Get Started</h1>
-            <hr>
-            <div class="container">
-                <label class="Fullname"><b>Name</b></label>
-                <input type="text" placeholder="Enter your name" name="Fullname" required>
-
-                <label class="Uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter your username" name="Uname" required>
-
-                <label class="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter your password" name="psw" required>
-
-                <label class="psw-repeat"><b>Confirm Password</b></label>
-                <input type="password" placeholder="Re-enter your password" name="psw-repeat" required>
-
-                <button type="submit" class="signupbtn">Sign Up</button>
-
-            </div>
-        </form>
-    </div>
-
-
-    <!--Sign In modal-->
-    <div id="SignIn" class="modal">
-        <form>
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close" onclick="close_signIn()">&times;</span>
-            </div>
-            <h2>Welcome Back!</h2>
-            <hr>
-            <div class="container">
-
-
-                <label class="Uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter your username" name="Uname" required>
-
-                <label class="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter your password" name="psw" required>
-
-
-                <button type="submit" class="signinbtn">Sign In</button>
-                <p>Not a member? <span id="signuplink" onclick="signUp()">Sign Up</span></p>
-            </div>
-        </form>
-    </div>
-<!--create post modal-->
-    <div id="CreatePost" class="modal2">
-
-        <form>
-            <div class="modal-content">
-                <span class ="close" onclick="close_CreatePost()">&times;</span>
-            </div>
-            <h1>Pen Your Post</h1>
-            <hr>
-            <div class="container1">
-    
-    
-                <label class="Title"><b>Title</b></label>
-                <input type="text" id="Title" class="textarea" name="Title" placeholder="Enter title of your post" required>
-              
-    
-                <label class="Content"><b>Contents</b></label>
-                <textarea id="description" class="textarea" name="description" placeholder="Enter the contents of your post" cols="40" rows="20"></textarea>
-                <button type="Create" class="Createbtn">Create</button>
-            </div>
-        </form>
-    </div>
-    <script type="text/javascript" src="scripts/common.js"></script>
-    <script type="text/javascript" src="scripts/index.js"></script>
+    <form>
+      <div class="form-group">
+        <label for="postTitle">Title</label>
+        <input class="form-control" id="postTitle" placeholder="Enter title of your post"
+               required type="text">
+      </div>
+      <div class="form-group">
+        <label for="postContent">Contents</label>
+        <textarea class="form-control" id="postContent"
+                  placeholder="Place the contents of your post"
+                  required rows="7"></textarea>
+      </div>
+      <button class="btn btn-success" style="width:100px;margin-left: 50%;" type="submit">Create
+      </button>
+    </form>
+  </div>
+</div>
+<div class="posts-btn">
+  <button class="btn btn-warning" onclick="openAllPosts()" type="button">All Posts</button>
+  <button class="btn btn-warning" onclick="createPosts()" type="button">Create Post</button>
+</div>
+<script src="./scripts/common.js" type="text/javascript"></script>
+<script src="./scripts/index.js" type="text/javascript"></script>
 
 </body>
 
