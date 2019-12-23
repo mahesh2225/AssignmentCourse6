@@ -129,6 +129,7 @@ body {
   
   #confirmer-modal .model-heading {
     border: none;
+    text-align: center;
   }
   
   @media only screen and (max-width: 1300px) {

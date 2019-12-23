@@ -50,15 +50,15 @@ function onEditButtnClicked() {
   document.getElementById('postContent').style.borderColor = "pink";
   document.getElementById('title').style.display = "none";
   document.getElementById(
-    'edit-save-button').innerHTML = 'Save <i class="fa fa-save"></i>';
-  document.getElementById('edit-save-button').setAttribute('onclick',
+    'saveButton').innerHTML = 'Save <i class="fa fa-save"></i>';
+  document.getElementById('saveButton').setAttribute('onclick',
     'onSaveButtonClicked()');
 }
 
 function onSaveButtonClicked() {
   document.getElementById(
-    'edit-save-button').innerHTML = 'Edit <i class="fa fa-edit"></i>';
-  document.getElementById('edit-save-button').setAttribute('onclick',
+    'saveButton').innerHTML = 'Edit <i class="fa fa-edit"></i>';
+  document.getElementById('saveButton').setAttribute('onclick',
     'onEditButtnClicked()');
   document.getElementById('postContent').setAttribute('disabled', 'true');
   document.getElementById('editpostTitle').style.display = "none";
@@ -100,8 +100,8 @@ function popuateComments() {
   document.getElementById('postedCommentsSection').style.background = '#b3aeae';
 }
 
-// showPostForEdit(index);
-function showPostForEdit(index) {
+
+function editPost(index) {
   var postEditTemplate = '</div>'
     + '<div class="custom-container">'
     + '<form>'
@@ -112,7 +112,7 @@ function showPostForEdit(index) {
     + '<div id="authorSection">'
     + '<span id="authName">' + posts[index].author + '</span>'
     + '<span>'
-    + '<button class="btn btn-danger" id="edit-save-button"'
+    + '<button class="btn btn-danger" id="saveButton"'
     + 'onclick="onEditButtnClicked()" style="float:right;" type="button">Edit <i '
     + 'class="fa fa-edit"></i></button>'
     + '</span>'
